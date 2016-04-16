@@ -273,4 +273,7 @@
   <data name="UsernameRequired" xml:space="preserve">
     <value>Gebruikersnaam is verplicht.</value>
   </data>
+  <data name="AccountNotApproved" xml:space="preserve">
+    <value>Account toegang is niet goedgekeurd.</value>
+  </data>
 </root>
