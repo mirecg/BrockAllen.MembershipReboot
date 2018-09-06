@@ -171,3 +171,4 @@ pip-log.txt
 /NuGet/BrockAllen.MembershipReboot.Owin/lib/net45
 /NuGet/BrockAllen.MembershipReboot.sk/lib/net45/sk
 /NuGet/NuGet.exe
+/src/.vs/BrockAllen.MembershipReboot/v15/Server/sqlite3
