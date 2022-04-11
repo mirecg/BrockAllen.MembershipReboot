@@ -540,17 +540,34 @@ namespace BrockAllen.MembershipReboot
             Tracing.Verbose("[UserAccountService.CreateAccount] SecuritySettings.RequirePasswordResetAfterAccountCreation is set to: {0}", account.RequiresPasswordReset);
 
             string key = null;
+            var emailVerified = false;
             if (!String.IsNullOrWhiteSpace(account.Email))
             {
-                Tracing.Verbose("[UserAccountService.CreateAccount] Email was provided, so creating email verification request");
-                key = SetVerificationKey(account, VerificationKeyPurpose.ChangeEmail, state: account.Email);
+                // use EmailVerified claim to skip the verification process (usefull when creating accounts from external providers that are supposed having an email already verified)
+                if (claims != null)
+                {
+                    var email_verified = claims.GetValue(JwtClaimTypes.EmailVerified);
+                    emailVerified = email_verified != null && email_verified == "true";
+                }
+                if (!emailVerified)
+                {
+                    Tracing.Verbose("[UserAccountService.CreateAccount] Email was provided, so creating email verification request");
+                    key = SetVerificationKey(account, VerificationKeyPurpose.ChangeEmail, state: account.Email);
+                }
+                else
+                {
+                    Tracing.Verbose("[UserAccountService.CreateAccount] Provided email is claiming as verified, so setting account as verified");
+                    account.IsAccountVerified = true;
+                }
             }
 
             if (claims != null)
             {
                 foreach (var claim in claims)
                 {
-                    AddClaim(account, new UserClaim(claim.Type, claim.Value));
+                    // exclude EmailVerified claim, as it is only used to control the verified state
+                    if (!emailVerified || claim.Type != JwtClaimTypes.EmailVerified)
+                        AddClaim(account, new UserClaim(claim.Type, claim.Value));
                 }
             }
 

@@ -62,6 +62,7 @@
     <Compile Include="Bus\Commands.cs" />
     <Compile Include="Bus\GenericMethodActionBuilder.cs" />
     <Compile Include="Configuration\RelativePathApplicationInformation.cs" />
+    <Compile Include="Constants\JwtClaimTypes.cs" />
     <Compile Include="Crypto\DefaultCrypto.cs" />
     <Compile Include="Crypto\ICrypto.cs" />
     <Compile Include="Extensions\ClaimsIdentityExtensions.cs" />
