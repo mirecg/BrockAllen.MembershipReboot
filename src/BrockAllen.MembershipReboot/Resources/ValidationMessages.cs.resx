@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountAlreadyVerified" xml:space="preserve">
+    <value>E-mailová adresa pro tento účet je již ověřena.</value>
+  </data>
+  <data name="AccountCreateFailNoEmailFromIdp" xml:space="preserve">
+    <value>Nelze vytvořit účet, protože tam nebyl žádný e-mail od poskytovatele identity.</value>
+  </data>
+  <data name="AccountNotConfiguredWithSecretQuestion" xml:space="preserve">
+    <value>Tento účet není nakonfigurován s tajnou otázkou nebo odpovědí.</value>
+  </data>
+  <data name="AccountNotVerified" xml:space="preserve">
+    <value>E-mailová adresa pro tento účet ještě není ověřena.</value>
+  </data>
+  <data name="AccountPasswordResetRequiresSecretQuestion" xml:space="preserve">
+    <value>Tento účet vyžaduje tajnou otázku a odpověď na reset hesla.</value>
+  </data>
+  <data name="AddClientCertForTwoFactor" xml:space="preserve">
+    <value>Přidejte klientský certifikát pro potřeby ověření druhým faktorem.</value>
+  </data>
+  <data name="CantRemoveLastLinkedAccountIfNoPassword" xml:space="preserve">
+    <value>Před odebráním posledního externího poskytovatele přihlášení je nutné nastavit heslo pro lokální účet.</value>
+  </data>
+  <data name="CertificateAlreadyInUse" xml:space="preserve">
+    <value>Tento certifikát již používá jiný účet.</value>
+  </data>
+  <data name="CodeRequired" xml:space="preserve">
+    <value>Kód je povinný.</value>
+  </data>
+  <data name="EmailAlreadyInUse" xml:space="preserve">
+    <value>Email se již používá.</value>
+  </data>
+  <data name="EmailRequired" xml:space="preserve">
+    <value>Email je povinný.</value>
+  </data>
+  <data name="InvalidCertificate" xml:space="preserve">
+    <value>Neplatný certifikát.</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Neplatný email.</value>
+  </data>
+  <data name="InvalidKey" xml:space="preserve">
+    <value>Neplatný klíč.</value>
+  </data>
+  <data name="InvalidName" xml:space="preserve">
+    <value>Neplatné jméno.</value>
+  </data>
+  <data name="InvalidNewPassword" xml:space="preserve">
+    <value>Neplatné nové heslo.</value>
+  </data>
+  <data name="InvalidOldPassword" xml:space="preserve">
+    <value>Neplatné staré heslo.</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>Neplatné heslo.</value>
+  </data>
+  <data name="InvalidPhone" xml:space="preserve">
+    <value>Neplatné telefonní číslo.</value>
+  </data>
+  <data name="InvalidQuestionOrAnswer" xml:space="preserve">
+    <value>Neplatná tajná otázka nebo odpověď.</value>
+  </data>
+  <data name="InvalidTenant" xml:space="preserve">
+    <value>Neplatný tenant.</value>
+  </data>
+  <data name="InvalidUsername" xml:space="preserve">
+    <value>Neplatné přihlašovací jméno.</value>
+  </data>
+  <data name="LinkedAccountAlreadyInUse" xml:space="preserve">
+    <value>Externí účet je již spojen s jiným uživatelem.</value>
+  </data>
+  <data name="LoginFailEmailAlreadyAssociated" xml:space="preserve">
+    <value>Nelze se přihlásit pomocí tohoto poskytovatele, protože email je již propojen s jiným účtem. Prosím, přihlaste se pomocí svého lokálního účtu a poté přiřaďte poskytovatele.</value>
+  </data>
+  <data name="LoginNotAllowed" xml:space="preserve">
+    <value>Přihlášení není povoleno pro tento účet.</value>
+  </data>
+  <data name="MobilePhoneAlreadyInUse" xml:space="preserve">
+    <value>Toto telefonní číslo je již použito jiným účtem.</value>
+  </data>
+  <data name="MobilePhoneMustBeDifferent" xml:space="preserve">
+    <value>Telefonní číslo musí být jiné než aktuální.</value>
+  </data>
+  <data name="MobilePhoneRequired" xml:space="preserve">
+    <value>Telefonní číslo je povinné.</value>
+  </data>
+  <data name="NameAlreadyInUse" xml:space="preserve">
+    <value>Toto jméno je již použito.</value>
+  </data>
+  <data name="NameRequired" xml:space="preserve">
+    <value>Jméno je povinné.</value>
+  </data>
+  <data name="NewPasswordMustBeDifferent" xml:space="preserve">
+    <value>Nové heslo musí být odlišné od starého hesla.</value>
+  </data>
+  <data name="PasswordComplexityRules" xml:space="preserve">
+    <value>Heslo musí obsahovat alespoň {0} z následujících znaků: jeden malý, jeden velký, jedno číslo a jeden další.</value>
+  </data>
+  <data name="PasswordLength" xml:space="preserve">
+    <value>Heslo musí být alespoň {0} znaků dlouhé.</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>Heslo je povinné.</value>
+  </data>
+  <data name="PasswordResetErrorNoEmail" xml:space="preserve">
+    <value>Resetování hesla není možné, protože e-mailová adresa nebyla ověřena pro tento účet.</value>
+  </data>
+  <data name="RegisterMobileForTwoFactor" xml:space="preserve">
+    <value>Zaregistrujte číslo mobilního telefonu, pro možnost dvoufaktorového ověření přes SMS.</value>
+  </data>
+  <data name="ReopenErrorNoEmail" xml:space="preserve">
+    <value>Znovuotevření účtu není možné, protože neexistuje žádná e-mailová adresa pro tento účet.</value>
+  </data>
+  <data name="SecretAnswerRequired" xml:space="preserve">
+    <value>Tajná odpověď je povinná.</value>
+  </data>
+  <data name="SecretQuestionAlreadyInUse" xml:space="preserve">
+    <value>Tato tajná otázka pro resetování hesla je již použita.</value>
+  </data>
+  <data name="SecretQuestionRequired" xml:space="preserve">
+    <value>Tajná otázka je povinná.</value>
+  </data>
+  <data name="TenantRequired" xml:space="preserve">
+    <value>Tenant je povinný.</value>
+  </data>
+  <data name="UsernameAlreadyInUse" xml:space="preserve">
+    <value>Přihlašovací jméno je již použito.</value>
+  </data>
+  <data name="UsernameCannotContainAtSign" xml:space="preserve">
+    <value>Přihlašovací jméno nemůže obsahovat znak '@'.</value>
+  </data>
+  <data name="UsernameCanOnlyStartOrEndWithLetterOrDigit" xml:space="preserve">
+    <value>Přihlašovací jméno může začínat nebo končit pouze písmenem nebo číslem.</value>
+  </data>
+  <data name="UsernameOnlyContainsValidCharacters" xml:space="preserve">
+    <value>Uživatelské jméno může obsahovat pouze písmena, číslice, mezery, tečky, pomlčky nebo podtržítko.</value>
+  </data>
+  <data name="UsernameRequired" xml:space="preserve">
+    <value>Přihlašovací jméno je povinné.</value>
+  </data>
+  <data name="UsernameCannotRepeatSpecialCharacters" xml:space="preserve">
+    <value>Uživatelské jméno nemůže mít dvě mezery, tečky, pomlčky nebo podtržítka vedle sebe.</value>
+  </data>
+  <data name="AccountClosed" xml:space="preserve">
+    <value>Účet je uzavřený.</value>
+  </data>
+  <data name="AccountNotConfiguredWithCertificates" xml:space="preserve">
+    <value>Pro přihlášení tento účet musí být nakonfigurován s certifikáty.</value>
+  </data>
+  <data name="AccountNotConfiguredWithMobilePhone" xml:space="preserve">
+    <value>Pro přihlášení tento účet musí být nakonfigurován s číslem mobilního telefonu.</value>
+  </data>
+  <data name="FailedLoginAttemptsExceeded" xml:space="preserve">
+    <value>Byl překročen počet povolených pokusů o přihlášení.</value>
+  </data>
+  <data name="InvalidCredentials" xml:space="preserve">
+    <value>Neplatné jméno nebo heslo.</value>
+  </data>
+  <data name="UsernameOnlyContainLettersAndDigits" xml:space="preserve">
+    <value>Přihlašovací jméno může obsahovat pouze písmena a číslice.</value>
+  </data>
+</root>
