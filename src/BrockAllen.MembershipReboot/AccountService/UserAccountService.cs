@@ -1948,7 +1948,9 @@ namespace BrockAllen.MembershipReboot
             if (account.AccountTwoFactorAuthMode == TwoFactorAuthMode.Mobile)
             {
                 Tracing.Verbose("[UserAccountService.ClearMobilePhoneNumber] disabling two factor auth");
-                ConfigureTwoFactorAuthentication(account, TwoFactorAuthMode.None);
+                // v striktnom rezime, dodrziavame konzistentne nastavenie druheho faktora a dvojfaktorovej autentifikacie
+                if (Configuration.StrictTwoFactorAuthMode)
+                    ConfigureTwoFactorAuthentication(account, TwoFactorAuthMode.None);
             }
 
             if (String.IsNullOrWhiteSpace(account.MobilePhoneNumber))
@@ -2407,15 +2409,30 @@ namespace BrockAllen.MembershipReboot
             if (mode == TwoFactorAuthMode.Mobile &&
                 String.IsNullOrWhiteSpace(account.MobilePhoneNumber))
             {
-                Tracing.Error("[UserAccountService.ConfigureTwoFactorAuthentication] failed -- mobile requested but no mobile phone for account");
-                throw new ValidationException(GetValidationMessage(MembershipRebootConstants.ValidationMessages.RegisterMobileForTwoFactor));
+                // v striktnom rezime dodrziavame konzistentne nastavenie druheho faktora a dvojfaktorovej autentifikacie
+                if (Configuration.StrictTwoFactorAuthMode)
+                {
+                    Tracing.Error("[UserAccountService.ConfigureTwoFactorAuthentication] failed -- mobile requested but no mobile phone for account");
+                    throw new ValidationException(GetValidationMessage(MembershipRebootConstants.ValidationMessages.RegisterMobileForTwoFactor));
+                }
+                else
+                {
+                    Tracing.Warning("[UserAccountService.ConfigureTwoFactorAuthentication] performed -- mobile requested but no mobile phone for account");
+                }
             }
 
             if (mode == TwoFactorAuthMode.Certificate &&
                 !account.Certificates.Any())
             {
-                Tracing.Error("[UserAccountService.ConfigureTwoFactorAuthentication] failed -- certificate requested but no certificates for account");
-                throw new ValidationException(GetValidationMessage(MembershipRebootConstants.ValidationMessages.AddClientCertForTwoFactor));
+                if (Configuration.StrictTwoFactorAuthMode)
+                {
+                    Tracing.Error("[UserAccountService.ConfigureTwoFactorAuthentication] failed -- certificate requested but no certificates for account");
+                    throw new ValidationException(GetValidationMessage(MembershipRebootConstants.ValidationMessages.AddClientCertForTwoFactor));
+                }
+                else
+                {
+                    Tracing.Warning("[UserAccountService.ConfigureTwoFactorAuthentication] performed -- certificate requested but no certificates for account");
+                }
             }
 
             ClearMobileAuthCode(account);
@@ -2912,7 +2929,9 @@ namespace BrockAllen.MembershipReboot
                 account.AccountTwoFactorAuthMode == TwoFactorAuthMode.Certificate)
             {
                 Tracing.Verbose("[UserAccountService.RemoveCertificate] last cert removed, disabling two factor auth");
-                ConfigureTwoFactorAuthentication(account, TwoFactorAuthMode.None);
+                // v striktnom rezime, dodrziavame konzistentne nastavenie druheho faktora a dvojfaktorovej autentifikacie
+                if (Configuration.StrictTwoFactorAuthMode)
+                    ConfigureTwoFactorAuthentication(account, TwoFactorAuthMode.None);
             }
         }
 

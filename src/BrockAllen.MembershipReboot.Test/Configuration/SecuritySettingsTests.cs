@@ -31,6 +31,7 @@ namespace BrockAllen.MembershipReboot.Test.Accounts
             Assert.AreEqual(true, settings.CertificateIsUnique);
             Assert.AreEqual(true, settings.MobilePhoneIsUnique);
             Assert.AreEqual(false, settings.RequirePasswordResetAfterAccountCreation);
+            Assert.AreEqual(true, settings.StrictTwoFactorAuthMode);
         }
     }
 }

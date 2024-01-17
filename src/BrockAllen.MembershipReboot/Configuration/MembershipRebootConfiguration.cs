@@ -35,6 +35,7 @@ namespace BrockAllen.MembershipReboot
             this.CertificateIsUnique = securitySettings.CertificateIsUnique;
             this.MobilePhoneIsUnique = securitySettings.MobilePhoneIsUnique;
             this.RequirePasswordResetAfterAccountCreation = securitySettings.RequirePasswordResetAfterAccountCreation;
+            this.StrictTwoFactorAuthMode = securitySettings.StrictTwoFactorAuthMode;
 
             this.Crypto = new DefaultCrypto();
         }
@@ -55,6 +56,12 @@ namespace BrockAllen.MembershipReboot
         public bool CertificateIsUnique { get; set; }
         public bool MobilePhoneIsUnique { get; set; }
         public bool RequirePasswordResetAfterAccountCreation { get; set; }
+        /// <summary>
+        /// V tzv. striktnom rezime dvojfaktorvej autentifikacie (default: true):
+        /// 1. je vyzadovane aby pouzivatelsky ucet disponoval odpovedajucim druhym faktorom
+        /// 2. ak sa odstrani druhy faktor, tak sa vypne aj dvojfaktorova autentifikacia
+        /// </summary>
+        public bool StrictTwoFactorAuthMode { get; set; }
 
 
         internal void Validate()

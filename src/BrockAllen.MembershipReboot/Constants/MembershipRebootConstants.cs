@@ -33,6 +33,7 @@ namespace BrockAllen.MembershipReboot
             internal const bool CertificateIsUnique = true;
             internal const bool MobilePhoneIsUnique = true;
             internal const bool RequirePasswordResetAfterAccountCreation = false;
+            internal const bool StrictTwoFactorAuthMode = true;
         }
 
         public class UserAccount
