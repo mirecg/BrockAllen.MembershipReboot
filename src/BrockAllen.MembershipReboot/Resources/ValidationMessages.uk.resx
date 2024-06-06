@@ -127,7 +127,7 @@
     <value>Невозможно создать аккаунт, т.к. отсутствует email в идентификационном провайдере.</value>
   </data>
   <data name="AccountNotConfiguredWithCertificates" xml:space="preserve">
-    <value>Для входа в систему, эта учетная запись должна быть настроена с сертификатами.</value>
+    <value>Для входу до цього облікового запису необхідно додати сертифікати.</value>
   </data>
   <data name="AccountNotConfiguredWithMobilePhone" xml:space="preserve">
     <value>Для входа в систему, эта учетная запись должна быть настроена с номером мобильного телефона.</value>
